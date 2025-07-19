@@ -346,3 +346,37 @@ footer {
     cursor: pointer;
     color: #555;
 }
+
+/* responsiveness */
+@media (max-width: 768px) {
+    .movie-details-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .movie-details-container p {
+        font-size: 1rem;
+    }
+
+    .movie-details-container .trailer-container iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-details-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .movie-details-container p {
+        font-size: 0.95rem;
+    }
+
+    .movie-details-container #backButton {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .movie-details-container .trailer-container iframe {
+        height: 200px;
+    }
+}

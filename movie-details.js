@@ -29,3 +29,21 @@ function fetchMovieDetails(id) {
             document.getElementById("movieOverview").textContent = "";
         });
 }
+// If trailer, then show 
+if (trailers.length > 0) {
+    var trailerKey = trailers[0].key;
+    var iframe = document.createElement("iframe");
+    iframe.width = "560";
+    iframe.height = "315";
+    iframe.src = "https://www.youtube.com/embed/" + trailerKey;
+    iframe.allowFullscreen = true;
+
+    document.getElementById("trailerContainer").appendChild(iframe);
+} else {
+    document.getElementById("trailerContainer").textContent = "No trailer available.";
+}
+        })
+        .catch (function () {
+    document.getElementById("trailerContainer").textContent = "Failed to load trailer.";
+});
+}

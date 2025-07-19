@@ -75,6 +75,36 @@ select {
     text-decoration: underline;
 }
 
+/*  Home Page  */
+#filterSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+}
+
+#resetFilters {
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#movieContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    flex: 1;
+}
+
 /* footer */
 footer {
     background-color: rgb(16, 16, 16);

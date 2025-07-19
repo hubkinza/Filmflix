@@ -45,3 +45,35 @@ document.addEventListener("DOMContentLoaded", function () {
         getMovies();
     });
 });
+// get genre list
+function getGenres() {
+    var url = baseURL + "/genre/movie/list?api_key=" + apiKey;
+
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            genresList = data.genres;
+            genreFilter.innerHTML = "<option value=''>All Genres</option>";
+
+            for (var i = 0; i < genresList.length; i++) {
+                var option = document.createElement("option");
+                option.value = genresList[i].id;
+                option.textContent = genresList[i].name;
+                genreFilter.appendChild(option);
+            }
+        });
+}
+// add years dropdown
+function addYearsToFilter() {
+    var currentYear = new Date().getFullYear();
+    yearFilter.innerHTML = "<option value=''>All Years</option>";
+
+    for (var y = currentYear; y >= 1980; y--) {
+        var option = document.createElement("option");
+        option.value = y;
+        option.textContent = y;
+        yearFilter.appendChild(option);
+    }
+}

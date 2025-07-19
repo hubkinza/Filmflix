@@ -1,6 +1,6 @@
 // API details
-var apiKey = "ac575a88671f952e2c572e2556c26cda"; // TMDB API key
-var baseURL = "https://api.themoviedb.org/3"; // TMDB base URL
+var apiKey = "ac575a88671f952e2c572e2556c26cda";
+var baseURL = "https://api.themoviedb.org/3";
 
 // Get DOM elements
 var movieContainer = document.getElementById("movieContainer"); // movie section container

@@ -153,6 +153,109 @@ select {
 }
 
 
+/* About Page */
+.background-wrapper {
+    background-image: url('images/horror-movie-collage.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.about-content {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.about-content h1 {
+    margin-bottom: 1rem;
+    color: #f7f4f4;
+}
+
+.about-content p {
+    margin: 0.8rem 0;
+    color: #333;
+}
+
+.about-container a {
+    color: #101111;
+    text-decoration: underline;
+}
+
+
+/* Movie Details Page */
+.movie-details-container {
+    padding: 30px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.movie-details-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.movie-details-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.movie-details-container .trailer-container iframe {
+    max-width: 100%;
+    height: 315px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.movie-details-container #backButton {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #303fe5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.movie-details-container #backButton:hover {
+    background-color: #333;
+}
+
+
 /* footer */
 footer {
     background-color: rgb(16, 16, 16);

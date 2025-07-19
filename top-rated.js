@@ -31,10 +31,13 @@ function displayMovies(movies) {
 
         // card content
         card.innerHTML = `
-      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-      <h3>${movie.title}</h3>
-      <p>Rating: ${movie.vote_average}</p>
-    `;
+            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+            <div class="movie-info">
+                <h3>${movie.title}</h3>
+                <p>Rating: ${movie.vote_average}</p>
+            </div>
+        `;
+
         // on card click
         card.addEventListener("click", () => {
             localStorage.setItem("selectedMovie", JSON.stringify(movie)); // save movie

@@ -1,0 +1,23 @@
+/* Global styles  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body styles */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 253, 253);
+    padding: 20px;
+    background-color: rgb(6, 6, 6);
+}

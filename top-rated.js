@@ -1,35 +1,42 @@
-var apiKey = "ac575a88671f952e2c572e2556c26cda"; // API key
-var baseURL = "https://api.themoviedb.org/3"; // API base URL
+// API details
+var apiKey = "ac575a88671f952e2c572e2556c26cda"; // TMDB API key
+var baseURL = "https://api.themoviedb.org/3"; // TMDB base URL
 
-var movieContainer = document.getElementById("movieContainer"); // movie section
-var errorMessage = document.getElementById("errorMessage"); // error box
-// get top-rated movies
+// Get DOM elements
+var movieContainer = document.getElementById("movieContainer"); // movie section container
+var errorMessage = document.getElementById("errorMessage"); // error message div
+
+// Fetch top-rated movies
 async function fetchTopRatedMovies() {
     try {
-        // make API call
+        // API request
         const res = await fetch(`${baseURL}/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`);
-        const data = await res.json(); // get JSON data
-        const topRated = data.results.filter(movie => movie.vote_average >= 8); // only good movies
+        const data = await res.json(); // parse response
 
-        // if movies found
+        // Filter by rating
+        const topRated = data.results.filter(movie => movie.vote_average >= 8); // only top-rated
+
+        // Show movies or error
         if (topRated.length > 0) {
-            displayMovies(topRated); // show movies
+            displayMovies(topRated); // render movies
         } else {
-            errorMessage.classList.remove("hidden"); // show error
+            errorMessage.classList.remove("hidden"); // show no results error
         }
     } catch (error) {
-        console.error("Error fetching top-rated movies:", error); // log error
-        errorMessage.classList.remove("hidden"); // show error
+        console.error("Error fetching top-rated movies:", error); // log issue
+        errorMessage.classList.remove("hidden"); // show fetch error
     }
 }
-// show movie cards
-function displayMovies(movies) {
-    movieContainer.innerHTML = ""; // clear container
-    movies.forEach(movie => {
-        const card = document.createElement("div"); // new card
-        card.className = "movie-card"; // add class
 
-        // card content
+// Render movie cards
+function displayMovies(movies) {
+    movieContainer.innerHTML = ""; // clear old results
+
+    movies.forEach(movie => {
+        const card = document.createElement("div"); // create card
+        card.className = "movie-card"; // assign class
+
+        // Add movie content
         card.innerHTML = `
             <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
             <div class="movie-info">
@@ -38,14 +45,9 @@ function displayMovies(movies) {
             </div>
         `;
 
-        // on card click
-        card.addEventListener("click", () => {
-            localStorage.setItem("selectedMovie", JSON.stringify(movie)); // save movie
-            window.location.href = "movie-details.html"; // go to page
-        });
-
-        movieContainer.appendChild(card); // add to page
+        movieContainer.appendChild(card); // add to container
     });
 }
 
-fetchTopRatedMovies(); 
+// Run on page load
+fetchTopRatedMovies();

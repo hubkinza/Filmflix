@@ -22,6 +22,33 @@ h1 {
     background-color: rgb(6, 6, 6);
 }
 
+/* Navbar  */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.nav-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* hover effect */
+.nav-links a:hover,
+.nav-links a.active {
+    text-decoration: underline;
+}
 
 /* footer */
 footer {

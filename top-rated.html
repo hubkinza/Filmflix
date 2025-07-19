@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>Top Rated Movies</title>
     <link rel="stylesheet" href="styles.css" /> <!-- link CSS file -->
 </head>
 
@@ -13,11 +13,19 @@
     <nav class="navbar">
         <div class="nav-brand">FilmFlix</div>
         <div class="nav-links">
-            <a href="index.html">Home</a>
+            <a href="index.html">Home</a>""
             <a href="top-rated.html">Top Rated</a>
             <a href="about.html" class="active">About</a>
         </div>
     </nav>
+    <main> <!-- main content -->
+        <h1>Top Rated Movies</h1> <!-- heading -->
+        <div id="movieContainer" class="movie-grid"></div> <!-- movie cards -->
+        <div id="errorMessage" class="error hidden">No top-rated movies found.</div> <!-- error message -->
+    </main>
+
+    <script src="top-rated.js"></script> <!-- JavaScript file -->
+
 </body>
 
 </html>

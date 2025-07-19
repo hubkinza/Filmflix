@@ -143,6 +143,15 @@ select {
 }
 
 
+/* error message */
+
+#errorMessage {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
 
 /* footer */
 footer {

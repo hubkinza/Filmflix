@@ -127,3 +127,34 @@ function getMovies() {
             errorMessage.classList.remove("hidden");
         });
 }
+// make movie card
+function createMovieCard(movieObj) {
+    var posterImageUrl;
+
+    if (movieObj.poster_path) {
+        posterImageUrl = "https://image.tmdb.org/t/p/w300" + movieObj.poster_path;
+    } else {
+        posterImageUrl = "https://via.placeholder.com/300x450?text=No+Image";
+    }
+
+    var releaseYear;
+
+    if (movieObj.release_date) {
+        releaseYear = movieObj.release_date.split("-")[0];
+    } else {
+        releaseYear = "N/A";
+    }
+
+    var html = `
+    <a href="movie-details.html?movieId=${movieObj.id}" class="movie-card">
+        <img src="${posterImageUrl}" alt="${movieObj.title}" />
+        <div class="movie-info">
+            <h3>${movieObj.title}</h3>
+            <p>Rating: ${movieObj.vote_average} | Year: ${releaseYear}</p>
+        </div>
+    </a>
+`;
+
+
+    return html;
+}

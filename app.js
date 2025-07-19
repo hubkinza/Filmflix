@@ -77,3 +77,53 @@ function addYearsToFilter() {
         yearFilter.appendChild(option);
     }
 }
+// get movie list
+function getMovies() {
+    var searchText = searchInput.value;
+    var selectedGenre = genreFilter.value;
+    var selectedYear = yearFilter.value;
+    var selectedRating = ratingFilter.value;
+
+    var apiUrl = baseURL + "/discover/movie?api_key=" + apiKey + "&sort_by=popularity.desc";
+
+    if (searchText !== "") {
+        apiUrl = baseURL + "/search/movie?api_key=" + apiKey + "&query=" + encodeURIComponent(searchText);
+    }
+
+    if (selectedGenre !== "") {
+        apiUrl += "&with_genres=" + selectedGenre;
+    }
+
+    if (selectedYear !== "") {
+        apiUrl += "&primary_release_year=" + selectedYear;
+    }
+
+    if (selectedRating !== "") {
+        apiUrl += "&vote_average.gte=" + selectedRating;
+    }
+
+    fetch(apiUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            movieContainer.innerHTML = "";
+
+            if (!data.results || data.results.length === 0) {
+                errorMessage.classList.remove("hidden");
+                return;
+            }
+
+            errorMessage.classList.add("hidden");
+
+            for (var i = 0; i < data.results.length; i++) {
+                var movieCardHTML = createMovieCard(data.results[i]);
+                movieContainer.innerHTML += movieCardHTML;
+            }
+        })
+        .catch(function (error) {
+            console.log(error);
+            errorMessage.textContent = "API Error. Please try again.";
+            errorMessage.classList.remove("hidden");
+        });
+}

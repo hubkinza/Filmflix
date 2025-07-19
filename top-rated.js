@@ -22,3 +22,27 @@ async function fetchTopRatedMovies() {
         errorMessage.classList.remove("hidden"); // show error
     }
 }
+// show movie cards
+function displayMovies(movies) {
+    movieContainer.innerHTML = ""; // clear container
+    movies.forEach(movie => {
+        const card = document.createElement("div"); // new card
+        card.className = "movie-card"; // add class
+
+        // card content
+        card.innerHTML = `
+      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+      <h3>${movie.title}</h3>
+      <p>Rating: ${movie.vote_average}</p>
+    `;
+        // on card click
+        card.addEventListener("click", () => {
+            localStorage.setItem("selectedMovie", JSON.stringify(movie)); // save movie
+            window.location.href = "movie-details.html"; // go to page
+        });
+
+        movieContainer.appendChild(card); // add to page
+    });
+}
+
+fetchTopRatedMovies(); 

@@ -194,7 +194,7 @@ Here are some screenshots of the final implementation:
 - Save favorite movies using local storage or user accounts
 - Improve accessibility with ARIA labels and keyboard navigation
 - Display loading indicators and error messages during API calls
-- Add dark mode toggle for better viewing experience
+- Add clickable movie cards in the Top rated movies list page so viewers can see movie details without having to navigate to home page and search for movie
 
 ## Deployment
 This project is deployed using **GitHub Pages**.

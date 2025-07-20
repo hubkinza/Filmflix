@@ -96,6 +96,8 @@ Filmflix/
 
 ## UI
 ### Color Scheme
+<img width="1596" height="614" alt="image" src="https://github.com/user-attachments/assets/e2904f84-40f6-47fa-99c0-d26b690aa25d" />
+
 ## 🎨 Color Scheme
 
 | Purpose / Element        | Color Code      | Description                              |
@@ -154,7 +156,7 @@ Here are some screenshots of the final implementation:
 ### CSS Validator 
 <img width="1920" height="848" alt="image" src="https://github.com/user-attachments/assets/e5d6f23a-394f-42e0-be46-7a1e48992f07" />
 
-### JavaScript Validator 
+### JavaScript Validator (Js Hint)
 #### Landing page
 <img width="1920" height="872" alt="image" src="https://github.com/user-attachments/assets/6b5166f1-8158-4cc0-a3c4-00c4d4017ee9" />
 
@@ -210,11 +212,14 @@ To deploy or update:
 ## Credits 
 Movie data provided by [The Movie Database (TMDB)](https://www.themoviedb.org/)
 
+Figma for wireframing and creating color pallete 
+
 Repository - https://github.com/bhagirath-wscubetech/javascript-projects/tree/main/movie-search-app
 
 https://github.com/devjldp -- A heartfelt thank you to Jose for his mentorship and guidance throughout my JavaScript learning journey.
 
 Chat GPT for support in generating ideas, user stories, markdown documentation. 
+
 
 
 

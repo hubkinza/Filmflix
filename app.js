@@ -1,14 +1,15 @@
-const apiKey = "ac575a88671f952e2c572e2556c26cda"; // API key
-const baseURL = "https://api.themoviedb.org/3";   // API base URL
+var apiKey = "ac575a88671f952e2c572e2556c26cda"; // API key
+var baseURL = "https://api.themoviedb.org/3";   // API base URL
 
 // const varibales
-const searchInput = document.getElementById("searchInput");
-const genreFilter = document.getElementById("genreFilter");
-const yearFilter = document.getElementById("yearFilter");
-const ratingFilter = document.getElementById("ratingFilter");
-const movieContainer = document.getElementById("movieContainer");
-const errorMessage = document.getElementById("errorMessage");
-const resetButton = document.getElementById("resetFilters");
+var searchInput = document.getElementById("searchInput");
+var genreFilter = document.getElementById("genreFilter");
+var yearFilter = document.getElementById("yearFilter");
+var ratingFilter = document.getElementById("ratingFilter");
+var movieContainer = document.getElementById("movieContainer");
+var errorMessage = document.getElementById("errorMessage");
+var resetButton = document.getElementById("resetFilters");
+var genresList = [];
 
 // when page loads
 document.addEventListener("DOMContentLoaded", function () {

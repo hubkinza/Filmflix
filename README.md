@@ -2,27 +2,25 @@
 <img width="1321" height="848" alt="image" src="https://github.com/user-attachments/assets/6d477582-a691-438d-beaf-f0c790b35b48" />
 
 ## Purpose of the Project
-
+Filmflix is a user-friendly movie browsing web app that allows users to discover, explore, and learn more about movies using real-time data from The Movie Database (TMDB) API. It aims to provide a clean,     responsive, and engaging interface for users to search for movies, filter by genre or release year, and view detailed information like overviews, ratings, and posters.
+ 
 ## Value for Users
 - Discover popular and top-rated movies instantly
 - Search for specific titles without leaving the page
 - Filter results by genre or release year for a more personalized experience
 - Responsive layout for seamless use on desktop and mobile devices
 - Clean, intuitive design to keep the focus on content
+  
 ## Project Structure
 Filmflix/
-├── css/
-│ └── style.css # Styling and layout for the entire site
-
-├── js/
-│ └── script.js # JavaScript logic: API calls, filters, rendering
-
-├── images/ # (Optional) Local assets if any
-├── index.html # Homepage with all movies and filters
-└── top rated.html # List of top-rated movies 
-└── movie-details.html # Deatils of selected movies
-├── about.html # Info about the website
-└── README.md # Project documentation
+- css/style.css # Styling and layout for the entire site
+- js/script.js # JavaScript logic: API calls, filters, rendering
+- images/ # (Optional) Local assets if any
+- index.html # Homepage with all movies and filters
+- top rated.html # List of top-rated movies 
+- movie-details.html # Deatils of selected movies
+- about.html # Info about the website
+- README.md # Project documentation
 
 ### Tools used in the project.
 - **HTML5** – Markup structure of the website  
@@ -32,8 +30,6 @@ Filmflix/
 - **Git & GitHub** – Version control and deployment  
 - **GitHub Pages** – Hosting the live version of the site  
 
-## User Stories 
- Filmflix is a user-friendly movie browsing web app that allows users to discover, explore, and learn more about movies using real-time data from The Movie Database (TMDB) API. It aims to provide a clean,     responsive, and engaging interface for users to search for movies, filter by genre or release year, and view detailed information like overviews, ratings, and posters.
 
 ##  User Stories
 

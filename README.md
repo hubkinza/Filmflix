@@ -1,7 +1,9 @@
 # Filmflix
 <img width="1321" height="848" alt="image" src="https://github.com/user-attachments/assets/6d477582-a691-438d-beaf-f0c790b35b48" />
+https://hubkinza.github.io/Filmflix/
 
 ## Purpose of the Project
+
 Filmflix is a user-friendly movie browsing web app that allows users to discover, explore, and learn more about movies using real-time data from The Movie Database (TMDB) API. It aims to provide a clean,     responsive, and engaging interface for users to search for movies, filter by genre or release year, and view detailed information like overviews, ratings, and posters.
  
 ## Value for Users

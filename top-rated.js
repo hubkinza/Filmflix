@@ -1,8 +1,9 @@
+
 // API details
 var apiKey = "ac575a88671f952e2c572e2556c26cda";
 var baseURL = "https://api.themoviedb.org/3";
 
-// Get DOM elements
+
 var movieContainer = document.getElementById("movieContainer"); // movie section container
 var errorMessage = document.getElementById("errorMessage"); // error message div
 
@@ -10,11 +11,13 @@ var errorMessage = document.getElementById("errorMessage"); // error message div
 async function fetchTopRatedMovies() {
     try {
         // API request
-        const res = await fetch(`${baseURL}/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`);
+        const res = await fetch(baseURL + "/movie/top_rated?api_key=" + apiKey + "&language=en-US&page=1");
         const data = await res.json(); // parse response
 
         // Filter by rating
-        const topRated = data.results.filter(movie => movie.vote_average >= 8); // only top-rated
+        var topRated = data.results.filter(function (movie) {
+            return movie.vote_average >= 8; // only top-rated
+        });
 
         // Show movies or error
         if (topRated.length > 0) {
@@ -32,18 +35,17 @@ async function fetchTopRatedMovies() {
 function displayMovies(movies) {
     movieContainer.innerHTML = ""; // clear old results
 
-    movies.forEach(movie => {
-        const card = document.createElement("div"); // create card
+    movies.forEach(function (movie) {
+        var card = document.createElement("div"); // create card
         card.className = "movie-card"; // assign class
 
         // Add movie content
-        card.innerHTML = `
-            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-            <div class="movie-info">
-                <h3>${movie.title}</h3>
-                <p>Rating: ${movie.vote_average}</p>
-            </div>
-        `;
+        card.innerHTML =
+            '<img src="https://image.tmdb.org/t/p/w500' + movie.poster_path + '" alt="' + movie.title + '">' +
+            '<div class="movie-info">' +
+            '<h3>' + movie.title + '</h3>' +
+            '<p>Rating: ' + movie.vote_average + '</p>' +
+            '</div>';
 
         movieContainer.appendChild(card); // add to container
     });

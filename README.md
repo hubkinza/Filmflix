@@ -13,8 +13,10 @@
 Filmflix/
 ├── css/
 │ └── style.css # Styling and layout for the entire site
+
 ├── js/
 │ └── script.js # JavaScript logic: API calls, filters, rendering
+
 ├── images/ # (Optional) Local assets if any
 ├── index.html # Homepage with all movies and filters
 └── top rated.html # List of top-rated movies 

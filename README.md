@@ -31,6 +31,8 @@ Filmflix/
 - **TMDB API** – Provides dynamic movie data  
 - **Git & GitHub** – Version control and deployment  
 - **GitHub Pages** – Hosting the live version of the site
+- **Figma** - Creating wireframing and color pallete 
+
   
 ## Screenshots
 Here are some screenshots of the final implementation:
@@ -213,8 +215,6 @@ To deploy or update:
    
 ## Credits 
 Movie data provided by [The Movie Database (TMDB)](https://www.themoviedb.org/)
-
-Figma for wireframing and creating color pallete 
 
 Repository - https://github.com/bhagirath-wscubetech/javascript-projects/tree/main/movie-search-app
 

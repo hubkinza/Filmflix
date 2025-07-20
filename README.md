@@ -216,6 +216,8 @@ Repository - https://github.com/bhagirath-wscubetech/javascript-projects/tree/ma
 
 https://github.com/devjldp -- A heartfelt thank you to Jose for his mentorship and guidance throughout my JavaScript learning journey.
 
+Chat GPT for support in generating ideas, user stories, markdown documentation. 
+
 
 
 

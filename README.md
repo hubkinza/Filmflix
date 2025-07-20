@@ -211,7 +211,10 @@ To deploy or update:
    
 ## Credits 
 Movie data provided by [The Movie Database (TMDB)](https://www.themoviedb.org/)
+
 Repository - https://github.com/bhagirath-wscubetech/javascript-projects/tree/main/movie-search-app
+
+https://github.com/devjldp -- A heartfelt thank you to Jose for his mentorship and guidance throughout my JavaScript learning journey.
 
 
 

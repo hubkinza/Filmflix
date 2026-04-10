@@ -163,7 +163,7 @@ select {
 
 /* About Page */
 .background-wrapper {
-    background-image: url('images/horror-movie-collage.webp');
+    background-image: url('../img/horror-movie-collage.webp');
     background-size: cover;
     background-position: center;
     min-height: 100vh;

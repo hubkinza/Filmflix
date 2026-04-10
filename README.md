@@ -12,22 +12,19 @@ Filmflix is a user-friendly movie browsing web app that allows users to discover
 - Filter results by genre or release year for a more personalized experience
 - Responsive layout for seamless use on desktop and mobile devices
 - Clean, intuitive design to keep the focus on content
-  
 ## Project Structure
-Filmflix/
-├── index.html              # Homepage with all movies and filters
-├── about.html              # Info about the website
-├── movie-details.html      # Details of selected movies
-├── top-rated.html          # List of top-rated movies
-└── static/
-    ├── css/
-    │   └── styles.css      # Styling and layout for the entire site
-    ├── js/
-    │   ├── app.js          # JavaScript logic: API calls, filters, rendering
-    │   ├── movie-details.js # JS for movie details page
-    │   └── top-rated.js    # JS for top-rated page
-    └── img/
-        └── horror-movie-collage.webp  # Background image assets
+
+| File/Folder | Description |
+|---|---|
+| `index.html` | Homepage with all movies and filters |
+| `about.html` | Info about the website |
+| `movie-details.html` | Details of selected movies |
+| `top-rated.html` | List of top-rated movies |
+| `static/css/styles.css` | Styling and layout for the entire site |
+| `static/js/app.js` | API calls, filters, rendering |
+| `static/js/movie-details.js` | JS for movie details page |
+| `static/js/top-rated.js` | JS for top-rated page |
+| `static/img/` | Image assets |
         
 ### Tools used in the project.
 - **HTML5** – Markup structure of the website  
